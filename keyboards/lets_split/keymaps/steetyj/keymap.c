@@ -30,11 +30,11 @@ enum custom_keycodes {
 #define XXXXXXX KC_NO
 
 // Custom macros
-//#define CTL_ESC     CTL_T(KC_ESC)               // Tap for Esc, hold for Ctrl
-#define GUI_ESC     GUI_T(KC_ESC)               // Tap for Esc, hold for Ctrl
-#define SFT_ENT     SFT_T(KC_ENT)               // Tap for Enter, hold for Shift
-#define FN_SPC      LT(_FN, KC_SPC)              // Tap for Space, holder for FN layer
-#define FN_ENT      LT(_FN, KC_ENT)              // Tap for Space, holder for FN layer
+//#define CTL_ESC   CTL_T(KC_ESC)     // Tap for Esc, hold for Ctrl
+#define GUI_ESC     GUI_T(KC_ESC)     // Tap for Esc, hold for Ctrl
+#define SFT_ENT     SFT_T(KC_ENT)     // Tap for Enter, hold for Shift
+#define FN_SPC      LT(_FN, KC_SPC)   // Tap for Space, holder for FN layer
+#define FN_ENT      LT(_FN, KC_ENT)   // Tap for Space, holder for FN layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -140,10 +140,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_FN] =  KEYMAP( \
-    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DEL, \
+    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DEL,  \
     _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT,  _______, _______, \
     _______, KC_F11,  KC_F12,  _______, _______, _______, KC_END,  _______, _______, _______,   _______, _______, \
-    _______, _______, _______, _______, _______, _______, _______, _______, KC_MFFD, KC_VOLD,   KC_VOLU, KC_MPLY \
+    _______, _______, _______, _______, _______, _______, _______, _______, KC_MFFD, KC_VOLD,   KC_VOLU, KC_MPLY  \
 ),
 
 /* Adjust (Lower + Raise)
