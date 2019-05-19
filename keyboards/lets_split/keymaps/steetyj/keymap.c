@@ -9,7 +9,12 @@ extern keymap_config_t keymap_config;
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 #define _QWERTY 0
+<<<<<<< HEAD
 #define _COLEMAKDH 1
+=======
+#define _COLEMAK 1
+#define _COLEMAKDH 2
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
 #define _LOWER 3
 #define _RAISE 4
 #define _FN 5
@@ -17,6 +22,10 @@ extern keymap_config_t keymap_config;
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
+<<<<<<< HEAD
+=======
+  COLEMAK,
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
   COLEMAKDH,
   LOWER,
   RAISE,
@@ -28,11 +37,19 @@ enum custom_keycodes {
 #define XXXXXXX KC_NO
 
 // Custom macros
+<<<<<<< HEAD
 //#define CTL_ESC     CTL_T(KC_ESC)               // Tap for Esc, hold for Ctrl
 #define GUI_ESC     GUI_T(KC_ESC)               // Tap for Esc, hold for Ctrl
 #define SFT_ENT     SFT_T(KC_ENT)               // Tap for Enter, hold for Shift
 #define FN_SPC      LT(_FN, KC_SPC)              // Tap for Space, holder for FN layer
 #define FN_ENT      LT(_FN, KC_ENT)              // Tap for Enter, holder for FN layer
+=======
+//#define CTL_ESC   CTL_T(KC_ESC)     // Tap for Esc, hold for Ctrl
+#define GUI_ESC     GUI_T(KC_ESC)     // Tap for Esc, hold for Ctrl
+#define SFT_ENT     SFT_T(KC_ENT)     // Tap for Enter, hold for Shift
+#define FN_SPC      LT(_FN, KC_SPC)   // Tap for Space, holder for FN layer
+#define FN_ENT      LT(_FN, KC_ENT)   // Tap for Space, holder for FN layer
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -54,6 +71,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX, KC_LCTL, KC_LALT, KC_LGUI, LOWER,  FN_ENT, FN_SPC,  RAISE, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
 ),
 
+<<<<<<< HEAD
+=======
+/* Colemak
+ * ,-----------------------------------------------------------------------------------.
+ * | Tab  |   Q  |   W  |   F  |   P  |   G  |   J  |   L  |   U  |   Y  |   ;  | Bksp |
+ * |------+------+------+------+------+-------------+------+------+------+------+------|
+ * | Esc  |   A  |   R  |   S  |   T  |   D  |   H  |   N  |   E  |   I  |   O  |  "   |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |   K  |   M  |   ,  |   .  |   /  |Enter |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      | Ctrl | Alt  | GUI  |Lower | Bksp |Space |Raise | Left | Down |  Up  |Right |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_COLEMAK] = KEYMAP( \
+    _______, KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,     KC_J,    KC_L,   KC_U,    KC_Y,    KC_SCLN, _______, \
+    _______, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,     KC_H,    KC_N,   KC_E,    KC_I,    KC_O,    _______, \
+    _______, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,     KC_K,    KC_M,   _______, _______, _______, _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
+),
+
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
 /* Colemak Mod DH
  * ,-----------------------------------------------------------------------------------.
  * | Tab  |   Q  |   W  |   F  |   P  |   B  |   J  |   L  |   U  |   Y  |   ;  | Bksp |
@@ -75,7 +113,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Lower
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Del  |
+<<<<<<< HEAD
  * |------+------+------+------+------+-------------+------+------+------+------+------|
+=======
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
  * |      |      |      |      |      |      |      |   _  |   +  |   {  |   }  |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
@@ -84,7 +126,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = KEYMAP( \
+<<<<<<< HEAD
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC, \
+=======
+  KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL, \
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
   _______, _______, _______, _______, _______, _______, _______, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_DOWN, KC_PGUP, KC_END \
@@ -93,7 +139,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Raise
  * ,-----------------------------------------------------------------------------------.
  * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Del  |
+<<<<<<< HEAD
  * |------+------+------+------+------+-------------+------+------+------+------+------|
+=======
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
  * |      |      |      |      |      |      |      |   -  |   =  |   [  |   ]  |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
@@ -102,7 +152,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = KEYMAP( \
+<<<<<<< HEAD
   KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,   KC_9,    KC_0,    KC_BSPC, \
+=======
+  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,   KC_9,    KC_0,    KC_DEL, \
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
   _______, _______, _______, _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_DOWN, KC_PGUP, KC_END \
@@ -111,19 +165,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* FN (Hold Space)
  * ,-----------------------------------------------------------------------------------.
  * |      |  F1   |  F2 |  F3  |  F4  |  F5  |      | PG UP|  UP  | PG DN|      | Del  |
+<<<<<<< HEAD
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |      |  F6  |  F7  |  F8  |  F9  |  F10 | HOME | LEFT | DOWN | RIGHT|      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |  F11 |  F12 |      |      |      | END  |      |      |      |      |      |
+=======
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |  F6  |  F7  |  F8  |  F9  |  F10 | HOME | LEFT | DOWN | RIGHT|      |      |
+ * |------+------+------+------+------+------|------+------+------+------+------+------|
+ * |      |  F11 |  F12 |  F13 |  F14 |  F15 | END  |      |      |      |      |      |
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |  Del |      |      | NEXT | vol+ | vol- | PLAY |
  * `-----------------------------------------------------------------------------------'
  */
 [_FN] =  KEYMAP( \
+<<<<<<< HEAD
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DEL, \
     _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT,  _______, _______, \
     _______, KC_F11,  KC_F12,  _______, _______, _______, KC_END,  _______, _______, _______,   _______, _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, KC_MFFD, KC_VOLD,   KC_VOLU, KC_MPLY \
+=======
+    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DEL,  \
+    _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT,  _______, _______, \
+    _______, KC_F11,  KC_F12,  _______, _______, _______, KC_END,  _______, _______, _______,   _______, _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, KC_MFFD, KC_VOLD,   KC_VOLU, KC_MPLY  \
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
 ),
 
 /* Adjust (Lower + Raise)
@@ -138,10 +206,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] =  KEYMAP( \
+<<<<<<< HEAD
     _______, RESET,   _______, _______, _______, _______, _______, _______, _______,   _______, _______, KC_DEL, \
     _______, _______, _______, AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAKDH, _______,  _______, _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, _______,   _______, _______, _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, _______,   _______, _______, _______ \
+=======
+    _______, RESET,   _______, _______, _______, _______, _______, _______, _______,  _______, _______, KC_DEL, \
+    _______, _______, _______, AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAK, COLEMAKDH,  _______, _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______ \
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
 )
 };
 
@@ -167,6 +242,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+<<<<<<< HEAD
+=======
+    case COLEMAK:
+      if (record->event.pressed) {
+        #ifdef AUDIO_ENABLE
+          PLAY_SONG(tone_colemak);
+        #endif
+        persistent_default_layer_set(1UL<<_COLEMAK);
+      }
+      return false;
+      break;
+>>>>>>> b684bc805780a3fa43cc5e4de86bef57c6190b23
     case COLEMAKDH:
       if (record->event.pressed) {
         #ifdef AUDIO_ENABLE

@@ -129,10 +129,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_FN] =  {
-  {_______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DEL },
-  {_______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT,  _______, _______},
-  {_______, KC_F11,  KC_F12,  _______, _______, _______, KC_END,  _______, _______, _______,   _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, KC_MFFD, KC_VOLD,   KC_VOLU, KC_MPLY}
+  {_______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,   KC_HOME, KC_UP,   KC_END,   _______, KC_DEL },
+  {_______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PGUP,   KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______},
+  {_______, KC_F11,  KC_F12,  _______, _______, _______, KC_PGDOWN, _______, _______, _______,  _______, _______},
+  {_______, _______, _______, _______, _______, _______, _______,   _______, KC_MFFD, KC_VOLD,  KC_VOLU, KC_MPLY}
 },
 
 /* Adjust (Lower + Raise)
